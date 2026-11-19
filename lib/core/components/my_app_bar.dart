@@ -24,7 +24,7 @@ class MyAppBar extends StatelessWidget {
           children: [
             AppLogo(),
             Spacer(),
-            if (context.isDesktop) AppMenus(),
+            if (context.isDesktop) LargeMenus(),
             Spacer(),
             LanguageToggle(),
             ThemeToggle(),
