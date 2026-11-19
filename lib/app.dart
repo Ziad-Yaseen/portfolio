@@ -1,4 +1,5 @@
 import 'package:cupertino_ui/cupertino_ui.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:portfolio/core/styles/app_theme.dart';
 import 'package:portfolio/features/home/screens/home_page.dart';
@@ -9,20 +10,22 @@ class Portfolio extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: AppTheme().light,
-      darkTheme: AppTheme().dark,
-      themeMode: .dark,
-      localizationsDelegates: const [
-        AppLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        DefaultWidgetsLocalizations.delegate,
-        DefaultCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: const [Locale('ar'), Locale('en')],
-      debugShowCheckedModeBanner: false,
-      locale: const Locale('en'),
-      home: const HomePage(),
+    return ProviderScope(
+      child: MaterialApp(
+        theme: AppTheme().light,
+        darkTheme: AppTheme().dark,
+        themeMode: .dark,
+        localizationsDelegates: const [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          DefaultWidgetsLocalizations.delegate,
+          DefaultCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: const [Locale('ar'), Locale('en')],
+        debugShowCheckedModeBanner: false,
+        locale: const Locale('en'),
+        home: const HomePage(),
+      ),
     );
   }
 }
