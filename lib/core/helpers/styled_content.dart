@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:portfolio/core/constants/app_size.dart';
 import 'package:portfolio/core/styles/app_text_styles.dart';
@@ -13,6 +14,8 @@ abstract final class Breakpoints {
 extension StyledContent on BuildContext {
   double get screenWidth => MediaQuery.sizeOf(this).width;
   double get screenHeight => MediaQuery.sizeOf(this).height;
+
+  ThemeData get theme => Theme.of(this);
 
   FormFactor get formFactor {
     if (screenWidth < Breakpoints.mobile) return FormFactor.mobile;

@@ -16,7 +16,7 @@ class MyAppBar extends StatelessWidget {
       alignment: .center,
       height: context.insets.appBarHeight,
       duration: const Duration(milliseconds: 400),
-      color: Theme.of(context).appBarTheme.backgroundColor,
+      color: context.theme.appBarTheme.backgroundColor,
       padding: EdgeInsets.symmetric(horizontal: context.insets.padding),
       child: ConstrainedBox(
         constraints: BoxConstraints(maxWidth: Insets.maxWidth),
