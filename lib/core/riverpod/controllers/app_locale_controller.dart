@@ -1,14 +1,8 @@
-import 'dart:async';
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class AppLocaleController extends AsyncNotifier<String> {
+class AppLocaleController extends Notifier<String> {
   @override
-  FutureOr<String> build() {
-    return 'en';
-  }
+  String build() => 'en';
 
-  void changeLocale(String newLocale) {
-    update((String state) => newLocale);
-  }
+  void changeLocale(String newLocale) => state = newLocale;
 }

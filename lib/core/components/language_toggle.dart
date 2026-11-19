@@ -10,32 +10,29 @@ class LanguageToggle extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
-    final locale = ref.watch(AppLocaleProvider);
-    return PopupMenuButton(
+    final locale = ref.watch(appLocaleProvider);
+    return PopupMenuButton<String>(
+      initialValue: locale,
+      onSelected: ref.read(appLocaleProvider.notifier).changeLocale,
+
       itemBuilder: (context) {
         return [
           const PopupMenuItem(
-            value: 0,
+            value: 'en',
             child: _PopupLanguageSwitchItem('English', '🇺🇸'),
           ),
           const PopupMenuItem(
-            value: 1,
+            value: 'ar',
             child: _PopupLanguageSwitchItem('العربية', '🇪🇬'),
           ),
         ];
-      },
-      initialValue: locale.value == 'en' ? 0 : 1,
-      onSelected: (value) {
-        value == 0
-            ? ref.read(AppLocaleProvider.notifier).changeLocale('en')
-            : ref.read(AppLocaleProvider.notifier).changeLocale('ar');
       },
       child: Row(
         mainAxisSize: .min,
         children: [
           Icon(Iconsax.language_square, color: context.colorScheme.onSurface),
           const Gap(4),
-          _SEOText(locale.value == 'en' ? 'En' : 'ع'),
+          _SEOText(locale == 'en' ? 'En' : 'ع'),
         ],
       ),
     );
