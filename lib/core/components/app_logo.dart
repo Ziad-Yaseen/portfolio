@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:portfolio/core/helpers/styled_content.dart';
 
 class AppLogo extends StatelessWidget {
@@ -9,7 +9,9 @@ class AppLogo extends StatelessWidget {
     return AnimatedDefaultTextStyle(
       duration: const Duration(milliseconds: 300),
       curve: Curves.easeInOut,
-      style: context.textStyle.titleLgBold,
+      style: context.textStyle.titleLgBold.copyWith(
+        color: Theme.of(context).colorScheme.onSurface,
+      ),
 
       child: Text(context.texts.appTitle),
     );
