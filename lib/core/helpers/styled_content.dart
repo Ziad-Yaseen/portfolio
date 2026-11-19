@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:portfolio/core/styles/app_text_styles.dart';
+import 'package:portfolio/l10n/app_localization.dart';
 
 enum FormFactor { mobile, tablet, desktop }
 
@@ -26,4 +27,7 @@ extension StyledContent on BuildContext {
     FormFactor.mobile || FormFactor.tablet => SmallTextStyles(),
     FormFactor.desktop => LargeTextStyles(),
   };
+
+  AppLocalizations get texts =>
+      AppLocalizations.of(this) ?? lookupAppLocalizations(const Locale('en'));
 }

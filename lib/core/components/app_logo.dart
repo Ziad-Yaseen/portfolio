@@ -1,6 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:portfolio/core/helpers/is_mobile.dart';
-import 'package:portfolio/l10n/app_localization.dart';
+import 'package:portfolio/core/helpers/styled_content.dart';
 
 class AppLogo extends StatelessWidget {
   const AppLogo({super.key});
@@ -12,7 +11,7 @@ class AppLogo extends StatelessWidget {
       curve: Curves.easeInOut,
       style: context.textStyle.titleLgBold,
 
-      child: Text(AppLocalizations.of(context)!.appTitle),
+      child: Text(context.texts.appTitle),
     );
   }
 }
