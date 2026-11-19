@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:portfolio/core/constants/app_size.dart';
 import 'package:portfolio/core/styles/app_text_styles.dart';
 import 'package:portfolio/l10n/app_localization.dart';
 
@@ -30,4 +31,9 @@ extension StyledContent on BuildContext {
 
   AppLocalizations get texts =>
       AppLocalizations.of(this) ?? lookupAppLocalizations(const Locale('en'));
+
+  AppInsets get insets => switch (formFactor) {
+    FormFactor.mobile => SmallInsets(),
+    FormFactor.desktop || FormFactor.tablet => LargeInsets(),
+  };
 }
