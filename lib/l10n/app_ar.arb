@@ -1,0 +1,11 @@
+{
+    "@@locale": "ar",
+
+    "appTitle": "معرض أعمال زياد يسين",
+    "home": "الرئيسية",
+    "courses": "الدورات",
+    "blog": "المدونة",
+    "aboutMe": "نبذة عني",
+    "toggleTheme": "تغيير المظهر",
+    "toggleLanguage": "تغيير اللغة"
+}

@@ -1,0 +1,24 @@
+{
+    "@@locale": "en",
+
+    "appTitle": "Ziad Yaseen Portfolio",
+    "@appTitle": { "description": "Title shown in the app bar" },
+
+    "home": "Home",
+    "@home": { "description": "Navigation menu: home" },
+
+    "courses": "Courses",
+    "@courses": { "description": "Navigation menu: courses" },
+
+    "blog": "Blog",
+    "@blog": { "description": "Navigation menu: blog" },
+
+    "aboutMe": "About Me",
+    "@aboutMe": { "description": "Navigation menu: about me" },
+
+    "toggleTheme": "Toggle theme",
+    "@toggleTheme": { "description": "Tooltip for the dark/light mode switch" },
+
+    "toggleLanguage": "Change language",
+    "@toggleLanguage": { "description": "Tooltip for the language switch" }
+}
