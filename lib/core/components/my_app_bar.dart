@@ -1,4 +1,5 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:portfolio/core/components/animated_visibility.dart';
 import 'package:portfolio/core/components/app_bar_drawer_icon.dart';
 import 'package:portfolio/core/components/app_logo.dart';
 import 'package:portfolio/core/components/app_menus.dart';
@@ -24,11 +25,14 @@ class MyAppBar extends StatelessWidget {
           children: [
             AppLogo(),
             Spacer(),
-            if (context.isDesktop) LargeMenus(),
+            AnimatedVisibility(visible: context.isDesktop, child: LargeMenus()),
             Spacer(),
             LanguageToggle(),
             ThemeToggle(),
-            if (!context.isDesktop) AppBarDrawerIcon(),
+            AnimatedVisibility(
+              visible: !context.isDesktop,
+              child: AppBarDrawerIcon(),
+            ),
           ],
         ),
       ),
