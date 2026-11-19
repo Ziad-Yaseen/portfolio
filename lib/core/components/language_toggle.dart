@@ -24,7 +24,9 @@ class LanguageToggle extends StatelessWidget {
         children: [
           Icon(Iconsax.language_square, color: context.colorScheme.onSurface),
           const Gap(4),
-          // _SEOText(locale.value == 'en' ? 'En' : 'ع'),
+          _SEOText(
+            Localizations.localeOf(context).languageCode == 'en' ? 'En' : 'ع',
+          ),
         ],
       ),
     );

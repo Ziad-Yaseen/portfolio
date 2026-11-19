@@ -21,6 +21,7 @@ class Portfolio extends StatelessWidget {
       ],
       supportedLocales: const [Locale('ar'), Locale('en')],
       debugShowCheckedModeBanner: false,
+      locale: const Locale('en'),
       home: const HomePage(),
     );
   }
