@@ -8,12 +8,15 @@ abstract class AppTextStyle {
   TextStyle get titleMdMedium;
   TextStyle get bodyLgBold;
   TextStyle get bodyLgMedium;
+  TextStyle get devName;
+  TextStyle _jetBrainsMonoStyle(double size, FontWeight weight) =>
+      GoogleFonts.jetBrainsMono(fontSize: size, fontWeight: weight);
+
+  TextStyle _style(double size, FontWeight weight) =>
+      GoogleFonts.cairo(fontSize: size, fontWeight: weight);
 }
 
 class SmallTextStyles extends AppTextStyle {
-  TextStyle _style(double size, FontWeight weight) =>
-      GoogleFonts.cairo(fontSize: size, fontWeight: weight);
-
   @override
   TextStyle get bodyLgBold => _style(14, FontWeight.w700);
 
@@ -31,13 +34,12 @@ class SmallTextStyles extends AppTextStyle {
 
   @override
   TextStyle get titleSmBold => _style(16, FontWeight.w700);
+
+  @override
+  TextStyle get devName => _jetBrainsMonoStyle(24, FontWeight.w700);
 }
 
-
 class LargeTextStyles extends AppTextStyle {
-  TextStyle _style(double size, FontWeight weight) =>
-      GoogleFonts.cairo(fontSize: size, fontWeight: weight);
-
   @override
   TextStyle get bodyLgBold => _style(16, FontWeight.w700);
 
@@ -55,4 +57,7 @@ class LargeTextStyles extends AppTextStyle {
 
   @override
   TextStyle get titleSmBold => _style(18, FontWeight.w700);
+
+  @override
+  TextStyle get devName => _jetBrainsMonoStyle(28, FontWeight.w700);
 }

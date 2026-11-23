@@ -2,6 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gap/gap.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:material_ui/material_ui.dart';
+import 'package:portfolio/core/constants/app_constants.dart';
 import 'package:portfolio/core/helpers/styled_content.dart';
 import 'package:portfolio/core/riverpod/providers/app_locale_provider.dart';
 
@@ -18,11 +19,11 @@ class LanguageToggle extends ConsumerWidget {
       itemBuilder: (context) {
         return [
           const PopupMenuItem(
-            value: 'en',
+            value: AppConstants.en,
             child: _PopupLanguageSwitchItem('English', '🇺🇸'),
           ),
           const PopupMenuItem(
-            value: 'ar',
+            value: AppConstants.ar,
             child: _PopupLanguageSwitchItem('العربية', '🇪🇬'),
           ),
         ];
@@ -32,7 +33,7 @@ class LanguageToggle extends ConsumerWidget {
         children: [
           Icon(Iconsax.language_square, color: context.colorScheme.onSurface),
           const Gap(4),
-          _SEOText(locale == 'en' ? 'En' : 'ع'),
+          _SEOText(locale == AppConstants.en ? 'En' : 'ع'),
         ],
       ),
     );

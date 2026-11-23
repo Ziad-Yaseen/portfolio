@@ -101,8 +101,14 @@ abstract class AppLocalizations {
   /// Title shown in the app bar
   ///
   /// In en, this message translates to:
-  /// **'Ziad Yaseen Portfolio'**
-  String get appTitle;
+  /// **'ziad'**
+  String get appTitle1;
+
+  /// Title shown in the app bar
+  ///
+  /// In en, this message translates to:
+  /// **'dev'**
+  String get appTitle2;
 
   /// Navigation menu: home
   ///

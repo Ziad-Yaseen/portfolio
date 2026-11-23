@@ -1,8 +1,10 @@
 {
     "@@locale": "en",
 
-    "appTitle": "Ziad Yaseen Portfolio",
-    "@appTitle": { "description": "Title shown in the app bar" },
+    "appTitle1": "ziad",
+    "appTitle2": "dev",
+    "@appTitle1": { "description": "Title shown in the app bar" },
+    "@appTitle2": { "description": "Title shown in the app bar" },
 
     "home": "Home",
     "@home": { "description": "Navigation menu: home" },
